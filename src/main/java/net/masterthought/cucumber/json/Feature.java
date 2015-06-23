@@ -1,20 +1,19 @@
 package net.masterthought.cucumber.json;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.google.common.base.Joiner;
+import com.google.common.base.Splitter;
+import com.google.common.collect.Lists;
+import com.googlecode.totallylazy.Sequence;
+import com.googlecode.totallylazy.Sequences;
 import net.masterthought.cucumber.ReportBuilder;
 import net.masterthought.cucumber.util.Status;
 import net.masterthought.cucumber.util.StatusCounter;
 import net.masterthought.cucumber.util.Util;
-
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.StringUtils;
 
-import com.google.common.base.Joiner;
-import com.google.common.base.Splitter;
-import com.googlecode.totallylazy.Sequence;
-import com.googlecode.totallylazy.Sequences;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Feature {
 
@@ -36,10 +35,10 @@ public class Feature {
         String[] splitedJsonFile = jsonFile.split("_");
         if (splitedJsonFile.length > 1)
             name = splitedJsonFile[0].substring(0, splitedJsonFile[0].length() - 1);
-      return name;
+        return name;
     }
 
-    public void setJsonFile(String json){
+    public void setJsonFile(String json) {
         this.jsonFile = json;
     }
 
@@ -58,7 +57,7 @@ public class Feature {
         List<String> lastElement = matches.subList(1, matches.size());
 
         matches = lastElement.isEmpty() ? matches : lastElement;
-        String fileName = Joiner.on("-").join(matches); 
+        String fileName = Joiner.on("-").join(matches);
 
         //If we spect to have parallel executions, we add 
         if (ReportBuilder.isParallel() && !jsonFile.isEmpty()) {
@@ -70,7 +69,7 @@ public class Feature {
         return fileName;
     }
 
-    public String getUri(){
+    public String getUri() {
         return this.uri;
     }
 
@@ -95,12 +94,12 @@ public class Feature {
         if (Util.itemExists(tags)) {
             List<String> str = getTagList().toList();
             List<String> tagList = new ArrayList<String>();
-            for(String s : str) {
+            for (String s : str) {
                 String link = s.replace("@", "").trim() + ".html";
                 String ref = "<a href=\"" + link + "\">" + s + "</a>";
                 tagList.add(ref);
             }
-            result = "<div class=\"feature-tags\">" +   StringUtils.join(tagList.toArray(), ",")+ "</div>";
+            result = "<div class=\"feature-tags\">" + StringUtils.join(tagList.toArray(), ",") + "</div>";
         }
         return result;
     }
@@ -148,6 +147,17 @@ public class Feature {
             result = elementList.size();
         }
         return result;
+    }
+
+    public String getProjectName() {
+        ArrayList<String> parts = Lists.newArrayList(Splitter.on("/").split(uri));
+        int aggregates = parts.indexOf("aggregates");
+        if (aggregates != -1 && aggregates < parts.size() - 1)
+            return "(aggregate) " + parts.get(aggregates + 1);
+        int workspace = parts.indexOf("workspace");
+        if (workspace != -1 && workspace < parts.size() - 1)
+            return parts.get(workspace + 1);
+        return "?";
     }
 
     public int getNumberOfSteps() {

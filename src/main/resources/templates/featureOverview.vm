@@ -382,6 +382,7 @@ if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
           #set($sf = $feature.getRawName())
 
           <tr>
+          <td>$feature.getProjectName()</td>
           <td style="text-align:left;"><a id="stats-$sf" href="$feature.getFileName()">$sf</a></td>
           #if($parallel)
               <td id="device">$feature.getDeviceName()</td>
@@ -402,6 +403,7 @@ if (AC_FL_RunContent == 0 || DetectFlashVer == 0) {
       #end
 
 <tr>
+<th style="background-color:lightgray">&nbsp;</th>
 <th id="stats-total-features" style="background-color:lightgray">$total_features</th>
 #if($parallel)
   <th id="stats-total-features" style="background-color:lightgray">-</th>

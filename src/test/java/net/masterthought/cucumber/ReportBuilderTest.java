@@ -122,6 +122,21 @@ public class ReportBuilderTest {
         assertEquals("passed", tableCells.get(12).text());
     }
 
+    @Test
+    public void shouldRenderTheFeatureOverviewPageCorrectlyWithJSChartsInNorsuMode() throws Exception {
+        File rd = new File(ReportBuilderTest.class.getClassLoader().getResource("net/masterthought/cucumber").toURI());
+        List<String> jsonReports = new ArrayList<String>();
+        jsonReports.add(new File(ReportBuilderTest.class.getClassLoader().getResource("net/masterthought/cucumber/norsu-reports.json").toURI()).getAbsolutePath());
+        ReportBuilder reportBuilder = new ReportBuilder(jsonReports, rd, "", "1", "cucumber-reporting", false, false, false, false, false, true, false, "", false, false);
+        reportBuilder.generateReports();
+
+        File input = new File(rd, "feature-overview.html");
+        Document doc = Jsoup.parse(input, "UTF-8", "");
+        assertThat(fromId("overview-title", doc).text(), is("Feature Overview for build: 1"));
+        assertStatsHeader(doc);
+        assertNotNull(fromId("js-charts", doc));
+    }
+
     private void assertStatsHeader(Document doc) {
         assertThat("stats-header", fromId("stats-header-scenarios", doc).text(), is("Scenarios"));
         assertThat("stats-header-feature", fromId("stats-header-feature", doc).text(), is("Feature"));

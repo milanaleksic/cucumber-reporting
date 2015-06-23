@@ -1,12 +1,13 @@
 <tr>
-    <th></th>
+    <th colspan="2" id="stats-header-feature">Feature</th>
     <th id="stats-header-scenarios" colspan="3">Scenarios</th>
     <th id="stats-header-steps" colspan="7">Steps</th>
     <th></th>
     <th></th>
 </tr>
 <tr>
-    <th id="stats-header-feature">Feature</th>
+    <th>Project</th>
+    <th>Name</th>
     <th id="stats-header-scenarios-total">Total</th>
     <th id="stats-header-scenarios-passed">Passed</th>
     <th id="stats-header-scenarios-failed">Failed</th>

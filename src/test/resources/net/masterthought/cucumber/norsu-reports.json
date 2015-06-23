@@ -1,0 +1,1083 @@
+[
+    {
+        "description": "",
+        "elements": [
+            {
+                "description": "",
+                "keyword": "Background",
+                "line": 3,
+                "name": "",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "line": 4,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 13,
+                                    "val": "pfx"
+                                },
+                                {
+                                    "offset": 25,
+                                    "val": "sender"
+                                },
+                                {
+                                    "offset": 50,
+                                    "val": "senderCustomerOwnedSoftware"
+                                }
+                            ],
+                            "location": "OrganizationStepsBT.groovy:20"
+                        },
+                        "name": "organization pfx of type sender exists in BT with senderCustomerOwnedSoftware",
+                        "result": {
+                            "duration": 3479336472,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 5,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 13,
+                                    "val": "pfx"
+                                },
+                                {}
+                            ],
+                            "location": "OrganizationStepsONP.groovy:18"
+                        },
+                        "name": "organization pfx exists in ONP",
+                        "result": {
+                            "duration": 404867363,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 6,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 5,
+                                    "val": "superuserpfx"
+                                },
+                                {
+                                    "offset": 21,
+                                    "val": "pfx"
+                                }
+                            ],
+                            "location": "UsersStepsONP.groovy:11"
+                        },
+                        "name": "user superuserpfx of pfx exists in ONP",
+                        "result": {
+                            "duration": 413257279,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 7,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 13,
+                                    "val": "bfn"
+                                },
+                                {
+                                    "offset": 25,
+                                    "val": "receiver"
+                                },
+                                {
+                                    "offset": 52,
+                                    "val": "receiverCustomerOwnedSoftware"
+                                }
+                            ],
+                            "location": "OrganizationStepsBT.groovy:20"
+                        },
+                        "name": "organization bfn of type receiver exists in BT with receiverCustomerOwnedSoftware",
+                        "result": {
+                            "duration": 259070948,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 8,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 13,
+                                    "val": "bfn"
+                                },
+                                {}
+                            ],
+                            "location": "OrganizationStepsONP.groovy:18"
+                        },
+                        "name": "organization bfn exists in ONP",
+                        "result": {
+                            "duration": 48884536,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 9,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 5,
+                                    "val": "superuserbfn"
+                                },
+                                {
+                                    "offset": 21,
+                                    "val": "bfn"
+                                }
+                            ],
+                            "location": "UsersStepsONP.groovy:11"
+                        },
+                        "name": "user superuserbfn of bfn exists in ONP",
+                        "result": {
+                            "duration": 61531876,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 10,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 26,
+                                    "val": "order"
+                                },
+                                {
+                                    "offset": 56,
+                                    "val": "bfn"
+                                }
+                            ],
+                            "location": "OrganizationStepsBT.groovy:49"
+                        },
+                        "name": "document redirection type order exists for organization bfn",
+                        "result": {
+                            "duration": 57661761,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 11,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 26,
+                                    "val": "orderChange"
+                                },
+                                {
+                                    "offset": 62,
+                                    "val": "bfn"
+                                }
+                            ],
+                            "location": "OrganizationStepsBT.groovy:49"
+                        },
+                        "name": "document redirection type orderChange exists for organization bfn",
+                        "result": {
+                            "duration": 13409888,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "type": "background"
+            },
+            {
+                "after": [
+                    {
+                        "match": {
+                            "location": "GlobalSteps.groovy:13"
+                        },
+                        "result": {
+                            "duration": 2942450,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "match": {
+                            "location": "GlobalSteps.groovy:33"
+                        },
+                        "result": {
+                            "duration": 734717735,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "match": {
+                            "location": "GlobalStepsONP.groovy:16"
+                        },
+                        "result": {
+                            "duration": 51328,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "before": [
+                    {
+                        "match": {
+                            "location": "GlobalStepsONP.groovy:11"
+                        },
+                        "result": {
+                            "duration": 135138,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "match": {
+                            "location": "GlobalStepsOnpPortal.groovy:10"
+                        },
+                        "result": {
+                            "duration": 34169393,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "description": "",
+                "id": "matching-of-order-change-data;as-a-user-when-opening-an-purchase-order-message-i-want-a-dedicated-view-of-its-referenced-po-change-and-items-changed-by-buyer",
+                "keyword": "Scenario",
+                "line": 15,
+                "name": "As a user when opening an purchase order message I want a dedicated view of its referenced PO change and items changed by buyer",
+                "steps": [
+                    {
+                        "keyword": "When ",
+                        "line": 16,
+                        "match": {
+                            "arguments": [
+                                {},
+                                {
+                                    "offset": 9,
+                                    "val": "purchase order"
+                                },
+                                {},
+                                {
+                                    "offset": 29,
+                                    "val": "pfx"
+                                },
+                                {
+                                    "offset": 37,
+                                    "val": "bfn"
+                                },
+                                {}
+                            ],
+                            "location": "PurchaseOrderStepsBT.groovy:17"
+                        },
+                        "name": "I upload purchase order from pfx for bfn to BT using REST API",
+                        "result": {
+                            "duration": 545250586,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "line": 17,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 0,
+                                    "val": "purchase order"
+                                },
+                                {}
+                            ],
+                            "location": "PurchaseOrderStepsBT.groovy:61"
+                        },
+                        "name": "purchase order is delivered from BT to ONP in reasonable time",
+                        "result": {
+                            "duration": 79774195006,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "line": 18,
+                        "match": {
+                            "arguments": [
+                                {},
+                                {
+                                    "offset": 9,
+                                    "val": "order change"
+                                },
+                                {},
+                                {
+                                    "offset": 27,
+                                    "val": "pfx"
+                                },
+                                {
+                                    "offset": 35,
+                                    "val": "bfn"
+                                },
+                                {}
+                            ],
+                            "location": "PurchaseOrderStepsBT.groovy:17"
+                        },
+                        "name": "I upload order change from pfx for bfn to BT using REST API",
+                        "result": {
+                            "duration": 573846180,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "line": 19,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 0,
+                                    "val": "order change"
+                                },
+                                {}
+                            ],
+                            "location": "PurchaseOrderStepsBT.groovy:61"
+                        },
+                        "name": "order change is delivered from BT to ONP in reasonable time",
+                        "result": {
+                            "duration": 59659023599,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 20,
+                        "match": {
+                            "arguments": [
+                                {},
+                                {
+                                    "offset": 49,
+                                    "val": "purchaseOrderChanged"
+                                },
+                                {
+                                    "offset": 81,
+                                    "val": "Portal"
+                                }
+                            ],
+                            "location": "BusinessDocumentsSteps.groovy:52"
+                        },
+                        "name": "the document has an accounting event with status purchaseOrderChanged for system Portal in reasonable time",
+                        "result": {
+                            "duration": 54148407941,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "line": 21,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 27,
+                                    "val": "superuserbfn"
+                                }
+                            ],
+                            "location": "LoginStepsOnpPortal.groovy:12"
+                        },
+                        "name": "I login into ONP portal as superuserbfn",
+                        "result": {
+                            "duration": 3874288376,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 22,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 16,
+                                    "val": "purchase order"
+                                }
+                            ],
+                            "location": "DocumentsStepsOnpPortal.groovy:50"
+                        },
+                        "name": "search and view purchase order from search results",
+                        "result": {
+                            "duration": 5447925303,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "line": 23,
+                        "match": {
+                            "location": "DocumentsStepsOnpPortal.groovy:220"
+                        },
+                        "name": "following list of values are found on change log tab:",
+                        "result": {
+                            "duration": 42974588409,
+                            "status": "passed"
+                        },
+                        "rows": [
+                            {
+                                "cells": [
+                                    "Field",
+                                    "Previous value",
+                                    "New value"
+                                ],
+                                "line": 24
+                            },
+                            {
+                                "cells": [
+                                    "Street",
+                                    "orchard Road",
+                                    "Basware Chandigarh"
+                                ],
+                                "line": 25
+                            },
+                            {
+                                "cells": [
+                                    "City",
+                                    "Manali",
+                                    "Chandigarh"
+                                ],
+                                "line": 26
+                            },
+                            {
+                                "cells": [
+                                    "Country",
+                                    "GB",
+                                    "India F"
+                                ],
+                                "line": 27
+                            },
+                            {
+                                "cells": [
+                                    "Address",
+                                    "abc",
+                                    "AB Sales Linnoitustie AB Sales House PO Box 70 FIN-02601 ESPOO"
+                                ],
+                                "line": 28
+                            },
+                            {
+                                "cells": [
+                                    "Amount",
+                                    "187",
+                                    "400"
+                                ],
+                                "line": 29
+                            },
+                            {
+                                "cells": [
+                                    "Product Code",
+                                    "P100",
+                                    "code98"
+                                ],
+                                "line": 30
+                            }
+                        ]
+                    }
+                ],
+                "tags": [
+                    {
+                        "line": 13,
+                        "name": "@JIRA_BP-6335"
+                    },
+                    {
+                        "line": 14,
+                        "name": "@IgnoreDevelopment"
+                    }
+                ],
+                "type": "scenario"
+            }
+        ],
+        "id": "matching-of-order-change-data",
+        "keyword": "Feature",
+        "line": 1,
+        "name": "Matching of order change data",
+        "uri": "/jenkins/e2e-tests/workspace/aggregates/bt_onpportal_e2e/src/main/resources/features/onp_matching_order_change_data.feature"
+    },
+    {
+        "description": "",
+        "elements": [
+            {
+                "description": "",
+                "keyword": "Background",
+                "line": 3,
+                "name": "",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "line": 4,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 0,
+                                    "val": "sender"
+                                },
+                                {
+                                    "offset": 20,
+                                    "val": "senderSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:102"
+                        },
+                        "name": "sender organization senderSI exists in ONP",
+                        "result": {
+                            "duration": 2188231562,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 5,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 0,
+                                    "val": "receiver"
+                                },
+                                {
+                                    "offset": 22,
+                                    "val": "receiverSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:102"
+                        },
+                        "name": "receiver organization receiverSI exists in ONP",
+                        "result": {
+                            "duration": 70359219,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 6,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 5,
+                                    "val": "e2eSender"
+                                },
+                                {
+                                    "offset": 18,
+                                    "val": "senderSI"
+                                }
+                            ],
+                            "location": "UsersStepsONP.groovy:11"
+                        },
+                        "name": "user e2eSender of senderSI exists in ONP",
+                        "result": {
+                            "duration": 230555339,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 7,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 2,
+                                    "val": "sender"
+                                },
+                                {
+                                    "offset": 22,
+                                    "val": "senderSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:37"
+                        },
+                        "name": "a sender organization senderSI exists in Gateway",
+                        "result": {
+                            "duration": 2352679631,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 8,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 2,
+                                    "val": "receiver"
+                                },
+                                {
+                                    "offset": 24,
+                                    "val": "receiverSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:37"
+                        },
+                        "name": "a receiver organization receiverSI exists in Gateway",
+                        "result": {
+                            "duration": 1646389035,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "type": "background"
+            },
+            {
+                "after": [
+                    {
+                        "match": {
+                            "location": "GlobalStepsONP.groovy:16"
+                        },
+                        "result": {
+                            "duration": 39161,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "match": {
+                            "location": "GlobalSteps.groovy:13"
+                        },
+                        "result": {
+                            "duration": 13805920,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "match": {
+                            "location": "GlobalSteps.groovy:33"
+                        },
+                        "result": {
+                            "duration": 1660659797,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "before": [
+                    {
+                        "match": {
+                            "location": "GlobalStepsONP.groovy:11"
+                        },
+                        "result": {
+                            "duration": 132313,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "description": "",
+                "id": "onp-to-gw;send-a-credit-note-to-gw",
+                "keyword": "Scenario",
+                "line": 21,
+                "name": "Send a credit note to GW",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "line": 22,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 0,
+                                    "val": "creditNote"
+                                },
+                                {
+                                    "offset": 37,
+                                    "val": "receiverSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:117"
+                        },
+                        "name": "creditNote transfer registration for receiverSI exists in ONP for Gateway organization",
+                        "result": {
+                            "duration": 100947853,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 23,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 38,
+                                    "val": "e2eCNSendBDTest"
+                                },
+                                {
+                                    "offset": 59,
+                                    "val": "senderSI"
+                                },
+                                {
+                                    "offset": 71,
+                                    "val": "receiverSI"
+                                }
+                            ],
+                            "location": "DocumentSteps.groovy:85"
+                        },
+                        "name": "prepared for sending businessDocument e2eCNSendBDTest from senderSI to receiverSI exists in ONP",
+                        "result": {
+                            "duration": 123532886,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "line": 24,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 4,
+                                    "val": "creditNote"
+                                },
+                                {
+                                    "offset": 15,
+                                    "val": "e2eCNSendBDTest"
+                                },
+                                {
+                                    "offset": 42,
+                                    "val": "e2eSender"
+                                }
+                            ],
+                            "location": "BusinessDocumentsSteps.groovy:68"
+                        },
+                        "name": "the creditNote e2eCNSendBDTest is sent by e2eSender from ONP",
+                        "result": {
+                            "duration": 2039660074,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "line": 25,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 22,
+                                    "val": "e2eCNSendBDTest"
+                                }
+                            ],
+                            "location": "BusinessDocumentsSteps.groovy:86"
+                        },
+                        "name": "the business document e2eCNSendBDTest has attachments",
+                        "result": {
+                            "duration": 45353505,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 26,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 9,
+                                    "val": "e2eCNSendBDTest"
+                                },
+                                {}
+                            ],
+                            "location": "DocumentSteps.groovy:74"
+                        },
+                        "name": "document e2eCNSendBDTest is delivered from ONP to GW in reasonable time",
+                        "result": {
+                            "duration": 3884903639,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "tags": [
+                    {
+                        "line": 19,
+                        "name": "@JIRA_BP-2836"
+                    },
+                    {
+                        "line": 20,
+                        "name": "@IgnoreDevelopment"
+                    }
+                ],
+                "type": "scenario"
+            },
+            {
+                "description": "",
+                "keyword": "Background",
+                "line": 3,
+                "name": "",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "line": 4,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 0,
+                                    "val": "sender"
+                                },
+                                {
+                                    "offset": 20,
+                                    "val": "senderSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:102"
+                        },
+                        "name": "sender organization senderSI exists in ONP",
+                        "result": {
+                            "duration": 1065240166,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 5,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 0,
+                                    "val": "receiver"
+                                },
+                                {
+                                    "offset": 22,
+                                    "val": "receiverSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:102"
+                        },
+                        "name": "receiver organization receiverSI exists in ONP",
+                        "result": {
+                            "duration": 71719975,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 6,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 5,
+                                    "val": "e2eSender"
+                                },
+                                {
+                                    "offset": 18,
+                                    "val": "senderSI"
+                                }
+                            ],
+                            "location": "UsersStepsONP.groovy:11"
+                        },
+                        "name": "user e2eSender of senderSI exists in ONP",
+                        "result": {
+                            "duration": 193906200,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 7,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 2,
+                                    "val": "sender"
+                                },
+                                {
+                                    "offset": 22,
+                                    "val": "senderSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:37"
+                        },
+                        "name": "a sender organization senderSI exists in Gateway",
+                        "result": {
+                            "duration": 1695409907,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 8,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 2,
+                                    "val": "receiver"
+                                },
+                                {
+                                    "offset": 24,
+                                    "val": "receiverSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:37"
+                        },
+                        "name": "a receiver organization receiverSI exists in Gateway",
+                        "result": {
+                            "duration": 1238806660,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "type": "background"
+            },
+            {
+                "after": [
+                    {
+                        "match": {
+                            "location": "GlobalStepsONP.groovy:16"
+                        },
+                        "result": {
+                            "duration": 51462,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "match": {
+                            "location": "GlobalSteps.groovy:13"
+                        },
+                        "result": {
+                            "duration": 2077796,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "match": {
+                            "location": "GlobalSteps.groovy:33"
+                        },
+                        "result": {
+                            "duration": 931917526,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "before": [
+                    {
+                        "match": {
+                            "location": "GlobalStepsONP.groovy:11"
+                        },
+                        "result": {
+                            "duration": 124038,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "description": "",
+                "id": "onp-to-gw;send-an-invoice-to-gw",
+                "keyword": "Scenario",
+                "line": 12,
+                "name": "Send an invoice to GW",
+                "steps": [
+                    {
+                        "keyword": "Given ",
+                        "line": 13,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 0,
+                                    "val": "invoice"
+                                },
+                                {
+                                    "offset": 34,
+                                    "val": "receiverSI"
+                                }
+                            ],
+                            "location": "OrganizationStepsGw.groovy:117"
+                        },
+                        "name": "invoice transfer registration for receiverSI exists in ONP for Gateway organization",
+                        "result": {
+                            "duration": 42082400,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 14,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 38,
+                                    "val": "e2eSendBDTest"
+                                },
+                                {
+                                    "offset": 57,
+                                    "val": "senderSI"
+                                },
+                                {
+                                    "offset": 69,
+                                    "val": "receiverSI"
+                                }
+                            ],
+                            "location": "DocumentSteps.groovy:85"
+                        },
+                        "name": "prepared for sending businessDocument e2eSendBDTest from senderSI to receiverSI exists in ONP",
+                        "result": {
+                            "duration": 44895889,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "When ",
+                        "line": 15,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 4,
+                                    "val": "invoice"
+                                },
+                                {
+                                    "offset": 12,
+                                    "val": "e2eSendBDTest"
+                                },
+                                {
+                                    "offset": 37,
+                                    "val": "e2eSender"
+                                }
+                            ],
+                            "location": "BusinessDocumentsSteps.groovy:68"
+                        },
+                        "name": "the invoice e2eSendBDTest is sent by e2eSender from ONP",
+                        "result": {
+                            "duration": 1282463211,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "Then ",
+                        "line": 16,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 22,
+                                    "val": "e2eSendBDTest"
+                                }
+                            ],
+                            "location": "BusinessDocumentsSteps.groovy:86"
+                        },
+                        "name": "the business document e2eSendBDTest has attachments",
+                        "result": {
+                            "duration": 22622012,
+                            "status": "passed"
+                        }
+                    },
+                    {
+                        "keyword": "And ",
+                        "line": 17,
+                        "match": {
+                            "arguments": [
+                                {
+                                    "offset": 9,
+                                    "val": "e2eSendBDTest"
+                                },
+                                {}
+                            ],
+                            "location": "DocumentSteps.groovy:74"
+                        },
+                        "name": "document e2eSendBDTest is delivered from ONP to GW in reasonable time",
+                        "result": {
+                            "duration": 5528369387,
+                            "status": "passed"
+                        }
+                    }
+                ],
+                "tags": [
+                    {
+                        "line": 10,
+                        "name": "@JIRA_BP-2836"
+                    },
+                    {
+                        "line": 11,
+                        "name": "@IgnoreDevelopment"
+                    }
+                ],
+                "type": "scenario"
+            }
+        ],
+        "id": "onp-to-gw",
+        "keyword": "Feature",
+        "line": 1,
+        "name": "ONP to GW",
+        "uri": "/jenkins/e2e-tests/workspace/gateway/src/main/resources/features/onp_to_gateway.feature"
+    }
+]
